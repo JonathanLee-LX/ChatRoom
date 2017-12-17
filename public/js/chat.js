@@ -3,15 +3,9 @@ var Chat  = function(socket){
   this.socket = socket
 }
 
-//封装输入框的文本内容和该文本的房间号为一个message对象
-Chat.prototype.sendMessage = function(room, text, nickName){
-  var message = {
-    room: room,
-    text: text,
-    nickName: nickName
-  }
-  //触发message事件
-  this.socket.emit('message', message  )
+//发送信息给服务器
+Chat.prototype.sendMessage = function (message){
+  this.socket.emit('message', message)
 }
 
 //变换房间事件
@@ -26,6 +20,7 @@ Chat.prototype.processCommand = function (command){
   var words = command.split(' ')
   var command = words[0].substring(1, words[0].length).toLowerCase()
   var message = false
+  console.log(command)
 
   switch(command){
     case 'join':
@@ -40,5 +35,7 @@ Chat.prototype.processCommand = function (command){
       break
     default:
       message = 'Unrecongnized command'
+      break
   }
+  return message
 }

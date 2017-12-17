@@ -9,51 +9,203 @@ a{
 
 code{
   background-color: #000;
-  color: #33f;
+  color: #33d4ff;
+}
+ul{
+  list-style: none;
 }
 
 #content{
-  width: 800px;
+  width: 1000px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #eee;
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 #room{
-  background-color: #ddd;
-  margin-bottom: 1em;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #555;
+  padding: 10px;
+  background-color: #74dff2;
 }
-
+#container{
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
 #messages{
-  width: 690px;
+  width: 70%;
   height: 300px;
-  overflow: auto;
-  background-color: #eee;
-  margin-bottom: 1em;
-  margin-right: 10px;
+  background-color: #fff;
+  color: #aaa;
+  overflow-y: scroll;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
-#room-list{
-  float: right;
-  width: 200px;
+#list{
   height: 300px;
-  overflow: auto;
-  background-color: #aaa;
+  width: 30%;
+  background-color: rgb(46, 205, 162);
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 #room-list div{
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #555;
 }
 
 #room-list div:hover{
-  background-color: #ddd;
+  background-color: #fff;
+}
+
+#input{
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding:20px;
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
 }
 
 #send-message{
-  width: 700px;
-  margin-bottom: 1em;
-  margin-right: 1em;
+  text-indent: 10px;
+  width: 550px;
+  height: 30px;
+  border:1px solid rgb(36, 164, 212);
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9em;
+  margin-right: 10px;
+}
+#send-button{
+  width: 50px;
+  height: 30px;
+  background-color: rgb(30, 148, 191);
+  line-height: 1.3em;
+  border-radius: 20px;
+  border:0;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9em;
 }
 
 #help{
-  font: 10px "Lucia Grande", Helvatica, Arial, sans-serif;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.message-item{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.message{
+  color: #ccc;
+}
+
+.my-message{
+  text-align: right;
+}
+
+.other-message{
+}
+
+@keyframes my-message {
+  from{
+    opacity: 0;
+  //  position: relative;
+  //  right: 40px;
+  }
+  to{
+    opacity: 1;
+    //right: 0;
+  }
+}
+
+@keyframes other-message{
+  from{
+    opacity: 0;
+//    position: relative;
+//    left: 40px;
+  }
+  to{
+    opacity: 1;
+  //  left: 0;
+  }
+}
+
+.nickName{
+  width: 50%;
+  height: auto;
+  padding: 5px;
+  font-size: 0.7em;
+}
+.text{
+  display: inline-block;
+  text-align: justify;
+  padding: 8px;
+  border-radius: 20px;
+  white-space:normal;
+  word-break:break-all;
+  word-wrap:break-word;
+  width: auto;
+  max-width: 50%;
+}
+.my-message .text{
+  border: 1px solid rgb(9, 88, 193);
+  color: rgb(9, 88, 193);
+  animation: 1s my-message;
+}
+.other-message .text{
+  background-color: rgb(9, 88, 193);
+  color: #fff;
+  animation: 1s other-message;
+}
+
+.help-list{
+  display: inline-block;
+  margin:0;
+}
+.help-list li{
+  float: left;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.info{
+  font-size: 0.6em;
+  text-align:center;
+}
+
+.promtInfo{
+  color: rgb(152, 152, 152);
+}
+.successInfo{
+  color: rgb(25, 172, 186);
+}
+
+.erroInfo{
+  color: rgb(227, 9, 29);
+}
+
+.title{
+  color: rgb(15, 16, 17);
+  font-weight: bold;
+}
+.title-3{
+  font-size: 1.5em;
 }
