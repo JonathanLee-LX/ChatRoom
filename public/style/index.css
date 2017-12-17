@@ -49,6 +49,7 @@ ul{
 }
 
 #room-list{
+	display: none;
 	width: 20%;
 	height: 100%;
 	float: left;
@@ -61,7 +62,7 @@ ul{
 }
 
 #room-list div:hover{
-	background-color: #fff;
+	background: #fff;
 }
 
 #send-form{
