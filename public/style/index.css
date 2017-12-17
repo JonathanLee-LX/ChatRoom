@@ -1,211 +1,233 @@
 body{
-  padding: 50px;
-  font: 18px "Lucia Grande", "Helvatica","Arial", "sans-serif";
+	padding: 50px;
+	font: 18px "Lucia Grande", "Helvatica","Arial", "sans-serif";
 }
 
 a{
-  color: #00B7FF;
+	color: #00B7FF;
 }
 
 code{
-  background-color: #000;
-  color: #33d4ff;
+	color: #aaa;
+	font-size: 0.8em;
 }
 ul{
-  list-style: none;
+	list-style: none;
 }
 
 #content{
-  width: 1000px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #eee;
-  border: 1px solid #333;
-  border-radius: 20px;
-  overflow: hidden;
+	width: 1000px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background: -webkit-gradient(linear, 0 0, right 0, from(#f0f5f6), to(#bbdddc));
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: -5px 5px 10px #ccc;
 }
 
-#room{
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid #555;
-  padding: 10px;
-  background-color: #74dff2;
+#current-room{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	background: -webkit-gradient(linear, 0 0, right 0, from(#f0f5f6), to(#bbdddc));
 }
 #container{
-  width: 100%;
-  height: 300px;
-  background-color: black;
+	width: 100%;
+	height: 300px;
+	background: -webkit-gradient(linear, 0 0, right 0, from(#f0f5f6), to(#bbdddc));
 }
 #messages{
-  width: 70%;
-  height: 300px;
-  background-color: #fff;
-  color: #aaa;
-  overflow-y: scroll;
-  float: left;
-  box-sizing: border-box;
-  padding: 10px;
+	width: 80%;
+	height: 100%;
+	color: #aaa;
+	overflow-y: scroll;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
-#list{
-  height: 300px;
-  width: 30%;
-  background-color: rgb(46, 205, 162);
-  float: left;
-  box-sizing: border-box;
-  padding: 10px;
+#room-list{
+	width: 20%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
 #room-list div{
-  border-bottom: 1px solid #555;
+	border-bottom: 1px solid #555;
 }
 
 #room-list div:hover{
-  background-color: #fff;
+	background-color: #fff;
 }
 
-#input{
-  margin-top: 20px;
-  box-sizing: border-box;
-  padding:20px;
-  width: 100%;
-  height: 50px;
-  background-color: #eee;
+#send-form{
+	width: 70%;
+	height: 80px;
+	margin-top: 20px;
+	text-align: center;
 }
 
 #send-message{
-  text-indent: 10px;
-  width: 550px;
-  height: 30px;
-  border:1px solid rgb(36, 164, 212);
-  border-radius: 20px;
-  outline: none;
-  font-size: 0.9em;
-  margin-right: 10px;
+	text-indent: 10px;
+	width: 550px;
+	height: 30px;
+	border:1px solid rgb(36, 164, 212);
+	border-radius: 20px;
+	outline: none;
+	font-size: 0.9em;
+	margin-right: 10px;
+	margin-top: 20px;
 }
+
 #send-button{
-  width: 50px;
-  height: 30px;
-  background-color: rgb(30, 148, 191);
-  line-height: 1.3em;
-  border-radius: 20px;
-  border:0;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-  font-size: 0.9em;
+	width: 50px;
+	height: 30px;
+	background-color: rgb(30, 148, 191);
+	line-height: 1.3em;
+	border-radius: 20px;
+	border:0;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	font-size: 0.9em;
 }
 
 #help{
-  height: 50px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 20px;
-  padding: 20px;
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
 }
 
+.help-list li{
+	margin-left: 10px;
+}
+
+
 .message-item{
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  padding: 10px;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
 .message{
-  color: #ccc;
+	color: #ccc;
 }
 
 .my-message{
-  text-align: right;
+	text-align: right;
 }
 
 .other-message{
 }
 
 @keyframes my-message {
-  from{
-    opacity: 0;
-  //  position: relative;
-  //  right: 40px;
-  }
-  to{
-    opacity: 1;
-    //right: 0;
-  }
+	from{
+		opacity: 0;
+		//  position: relative;
+		//  right: 40px;
+	}
+	to{
+		opacity: 1;
+		//right: 0;
+	}
 }
 
 @keyframes other-message{
-  from{
-    opacity: 0;
-//    position: relative;
-//    left: 40px;
-  }
-  to{
-    opacity: 1;
-  //  left: 0;
-  }
+	from{
+		opacity: 0;
+		//    position: relative;
+		//    left: 40px;
+	}
+	to{
+		opacity: 1;
+		//  left: 0;
+	}
 }
 
 .nickName{
-  width: 50%;
-  height: auto;
-  padding: 5px;
-  font-size: 0.7em;
+	width: 50%;
+	height: auto;
+	padding: 5px;
+	font-size: 0.7em;
 }
 .text{
-  display: inline-block;
-  text-align: justify;
-  padding: 8px;
-  border-radius: 20px;
-  white-space:normal;
-  word-break:break-all;
-  word-wrap:break-word;
-  width: auto;
-  max-width: 50%;
+	display: inline-block;
+	text-align: justify;
+	padding: 3px 8px;
+	border-radius: 20px;
+	white-space:normal;
+	word-break:break-all;
+	word-wrap:break-word;
+	width: auto;
+	max-width: 50%;
 }
 .my-message .text{
-  border: 1px solid rgb(9, 88, 193);
-  color: rgb(9, 88, 193);
-  animation: 1s my-message;
+	border: 1px solid rgb(9, 88, 193);
+	color: rgb(9, 88, 193);
+	animation: 1s my-message;
 }
 .other-message .text{
-  background-color: rgb(9, 88, 193);
-  color: #fff;
-  animation: 1s other-message;
+	background-color: rgb(9, 88, 193);
+	color: #fff;
+	animation: 1s other-message;
 }
 
 .help-list{
-  display: inline-block;
-  margin:0;
+	display: inline-block;
+	margin:0;
 }
 .help-list li{
-  float: left;
-  color: #888;
-  font-size: 0.9em;
+	float: left;
+	font-size: 0.9em;
 }
 
 .info{
-  font-size: 0.6em;
-  text-align:center;
+	font-size: 0.6em;
+	text-align:center;
 }
 
 .promtInfo{
-  color: rgb(152, 152, 152);
+	color: rgb(152, 152, 152);
 }
 .successInfo{
-  color: rgb(25, 172, 186);
+	color: rgb(25, 172, 186);
 }
 
 .erroInfo{
-  color: rgb(227, 9, 29);
+	color: rgb(227, 9, 29);
 }
 
 .title{
-  color: rgb(15, 16, 17);
-  font-weight: bold;
+	color: rgb(15, 16, 17);
+	font-weight: bold;
 }
 .title-3{
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
+
+
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 10px;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    background-color: #ccc;  
+}  
