@@ -1,0 +1,20 @@
+{
+  "name": "chatroom",
+  "version": "0.0.1",
+  "description": "Minimalist multiroom chat server",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JonathanLee",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "mime": "^2.0.3",
+    "mine": "~1.2.7",
+    "socket.io": "^2.0.4"
+  }
+}
